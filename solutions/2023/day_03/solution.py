@@ -33,26 +33,28 @@ class Solution(StrSplitSolution):
         x2 = 0
         for row, line in enumerate(self.input):
             for col, val in enumerate(line):
-                if not numactive and (val == "." or val in symbols ):
-                    continue
-                elif not (numactive) and val.isnumeric():
-                    current = val
-                    numactive = True
-                    x1 = col
-                elif numactive and (val == "." or val in symbols):
-                    new = int(current)
-                    x2 = col-1
-                    numbers.append((new, x1, x2, row))
-                    numactive = False
-                    current = ""
-                elif numactive and val.isnumeric():
-                    current += val
-                    if col == width - 1:
+                if not numactive:
+                    if val == "." or val in symbols:
+                        continue
+                    elif val.isnumeric():
+                        current = val
+                        numactive = True
+                        x1 = col
+                elif numactive:
+                    if val == "." or val in symbols:
                         new = int(current)
-                        x2 = col
+                        x2 = col-1
                         numbers.append((new, x1, x2, row))
                         numactive = False
                         current = ""
+                    elif val.isnumeric():
+                        current += val
+                        if col == width - 1:
+                            new = int(current)
+                            x2 = col
+                            numbers.append((new, x1, x2, row))
+                            numactive = False
+                            current = ""
 
     def part_1(self) -> int:
         answer = 0
