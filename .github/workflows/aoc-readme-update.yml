@@ -14,6 +14,7 @@ jobs:
         with:
           userId: ${{ secrets.AOC_USERID }}
           sessionCookie: ${{ secrets.AOC_SESSION }}
+          year: 2023
       - uses: joblo2213/aoc-badges-action@v3
         with:
           userid: ${{ secrets.AOC_USERID }}     # your user id, see setup on how to obtain
