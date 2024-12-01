@@ -1,11 +1,11 @@
 # adventofcode2023
 Advent of Code 2023
 
-![](https://img.shields.io/badge/day%20📅-1-blue)
+![](https://img.shields.io/badge/day%20📅-24-blue)
 
-![](https://img.shields.io/badge/stars%20⭐-2-yellow)
+![](https://img.shields.io/badge/stars%20⭐-9-yellow)
 
-![](https://img.shields.io/badge/days%20completed-1-red)
+![](https://img.shields.io/badge/days%20completed-4-red)
 
 <!--- advent_readme_stars table --->
 ## 2024 Results
